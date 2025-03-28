@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio Desenvolvimento WEB</title>
+  <style>
+    /* Estilo geral */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center; /* Centralizando conteúdo */
+    }
+
+    /* Estilização dos gêneros musicais */
+    .genres > li {
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+      border-left: 4px solid #333;
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+
+    /* Estilização dos artistas */
+    ul > li {
+      color: #555;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+
+    /* Estilo individual usando :first-child e :last-child */
+    ul > li:first-child {
+      color: #e91e63;
+    }
+
+    ul > li:last-child {
+      color: #673ab7;
+    }
+
+    /* Mudança de cor e borda ao passar o mouse em um artista */
+    ul > li:hover {
+      color: #2196f3;
+      border: 1px solid #2196f3;
+      border-radius: 4px;
+      padding: 4px;
+      cursor: pointer;
+    }
+
+    /* Fundo e layout responsivos */
+    /* Fundo laranja para telas menores que 600px */
+    @media (max-width: 599px) {
+      body {
+        background-color: orange;
+        font-size: 14px;
+      }
+      button {
+        background-color: red; /* Cor do botão */
+      }
+      .container {
+        display: flex;
+        flex-direction: column; /* Layout em coluna */
+      }
+    }
+
+    /* Fundo azul para telas entre 600px e 900px */
+    @media (min-width: 600px) and (max-width: 899px) {
+      body {
+        background-color: blue;
+        font-size: 16px;
+      }
+      button {
+        background-color: green; /* Cor do botão */
+      }
+      .container {
+        display: flex;
+        flex-direction: row; /* Layout em linha */
+      }
+    }
+
+    /* Fundo roxo para telas maiores que 900px */
+    @media (min-width: 900px) {
+      body {
+        background-color: purple;
+        font-size: 18px;
+      }
+      button {
+        background-color: yellow; /* Cor do botão */
+      }
+      .hidden-image {
+        display: block; /* Exibir imagem */
+      }
+    }
+
+    /* Imagem escondida por padrão */
+    .hidden-image {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Estilos Musicais</h1>
+    <p>Explore os gêneros e artistas de maneira estilizada e responsiva.</p>
+    <ol class="genres">
+      <li>Rock
+        <ul>
+          <li>Queen</li>
+          <li>Led Zeppelin</li>
+        </ul>
+      </li>
+      <li>Pop
+        <ul>
+          <li>Michael Jackson</li>
+          <li>Madonna</li>
+        </ul>
+      </li>
+      <li>Jazz
+        <ul>
+          <li>Miles Davis</li>
+          <li>John Coltrane</li>
+        </ul>
+      </li>
+    </ol>
+    <button>Saiba Mais</button>
+    <img src="imagem.jpg" alt="Imagem ilustrativa" class="hidden-image">
+  </div>
+</body>
+</html>

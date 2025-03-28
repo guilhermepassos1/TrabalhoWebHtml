@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Responsiva</title>
+  <style>
+    /* Estilo geral */
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      text-align: center; /* Centralizando conteúdo */
+    }
+
+    /* Fundo laranja para telas menores que 600px */
+    @media (max-width: 599px) {
+      body {
+        background-color: orange;
+        font-size: 14px;
+      }
+      button {
+        background-color: red; /* Mudando cor do botão */
+      }
+      .container {
+        display: flex;
+        flex-direction: column; /* Layout em coluna */
+      }
+    }
+
+    /* Fundo azul para telas entre 600px e 900px */
+    @media (min-width: 600px) and (max-width: 899px) {
+      body {
+        background-color: blue;
+        font-size: 16px;
+      }
+      button {
+        background-color: green; /* Mudando cor do botão */
+      }
+      .container {
+        display: flex;
+        flex-direction: row; /* Layout em linha */
+      }
+    }
+
+    /* Fundo roxo para telas maiores que 900px */
+    @media (min-width: 900px) {
+      body {
+        background-color: purple;
+        font-size: 18px;
+      }
+      button {
+        background-color: yellow; /* Mudando cor do botão */
+      }
+      .hidden-image {
+        display: block; /* Exibindo imagem para telas maiores */
+      }
+    }
+
+    /* Imagem escondida por padrão */
+    .hidden-image {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Estilo Musical</h1>
+    <p>Adapte o visual da página para diferentes tamanhos de tela!</p>
+    <button>Saiba Mais</button>
+    <img src="imagem.jpg" alt="Imagem ilustrativa" class="hidden-image">
+  </div>
+</body>
+</html>
